@@ -81,7 +81,7 @@ public class TelaDespesaUsuario {
 		conUsuario = new ControladoraUsuario();
 		
 		usuarios = conUsuario.consultarTodosUsuariosController();
-		JComboBox<UsuarioVO> cbUsuario = new JComboBox();
+		final JComboBox<UsuarioVO> cbUsuario = new JComboBox();
 		cbUsuario.addItem(null);
 		for (UsuarioVO user: usuarios) {
 			cbUsuario.addItem(user);			
@@ -93,7 +93,7 @@ public class TelaDespesaUsuario {
 		JLabel lblNewLabel_1 = new JLabel("Categoria:");
 		frame.getContentPane().add(lblNewLabel_1, "cell 5 1");
 		
-		JComboBox cbCategoria = new JComboBox();
+		final JComboBox cbCategoria = new JComboBox();
 		frame.getContentPane().add(cbCategoria, "flowx,cell 6 1,growx");
 		ArrayList<DespesaVO> categorias = new ArrayList();
 		ControladoraDespesa conDespesa = new ControladoraDespesa();
